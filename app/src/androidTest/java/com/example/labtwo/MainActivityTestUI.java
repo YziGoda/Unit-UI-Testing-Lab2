@@ -76,7 +76,7 @@ public class MainActivityTestUI {
         onView(withId(R.id.spSelectOption)).perform(click());
         onView(withText("Words")).perform(click());
         onView(withId(R.id.btnCount)).perform(click());
-        onView(withId(R.id.tvMain)).check(matches(withText("Words: 4")));
+        onView(withId(R.id.tvMain)).check(matches(withText(expectedResult)));
     }
 
 

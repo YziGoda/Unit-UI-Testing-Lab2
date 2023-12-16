@@ -2,7 +2,7 @@ package com.example.labtwo;
 
 public class TextCounter
 {
-    public static int countSymbols(String phrase)
+    public int countSymbols(String phrase)
     {
         int  result = 0;
 
@@ -17,7 +17,7 @@ public class TextCounter
         return result;
     }
 
-    public static int countWords(String phrase)
+    public int countWords(String phrase)
     {
         phrase = phrase.replace("/n", " "); //jei butu newline pakeistu i space
         String[] words = phrase.split("[\\s,\\.]"); // atskiriami tarpais, kableliais, taskais

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity
     Button btnCount;
     TextView tvMain;
     Spinner spSelectOption;
-
+    TextCounter tc = new TextCounter();
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     public void onBtnCountClick(View view)
     {
+
         if (this.edUserInput.getText().toString().equals(""))
         {
             Toast.makeText(this,"No words or symbols detected.", Toast.LENGTH_LONG).show();
@@ -50,12 +51,12 @@ public class MainActivity extends AppCompatActivity
         {
             if (this.spSelectOption.getSelectedItem().toString().equals("Symbols"))
             {
-                int result = TextCounter.countSymbols(this.edUserInput.getText().toString());
+                int result = tc.countSymbols(this.edUserInput.getText().toString());
                 this.tvMain.setText("Symbols: "+ String.valueOf(result));
             }
             else if (this.spSelectOption.getSelectedItem().toString().equals("Words"))
             {
-                int result = TextCounter.countWords(this.edUserInput.getText().toString());
+                int result = tc.countWords(this.edUserInput.getText().toString());
                 this.tvMain.setText("Words: " + String.valueOf(result));
             }
         }

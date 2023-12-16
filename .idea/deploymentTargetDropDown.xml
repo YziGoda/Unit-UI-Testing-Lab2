@@ -8,15 +8,6 @@
       <entry key="app">
         <State />
       </entry>
-      <entry key="test()">
-        <State />
-      </entry>
-      <entry key="testEmptyInputShowsToast()">
-        <State />
-      </entry>
-      <entry key="test_If_Symbol_Count_Is_The_Same()">
-        <State />
-      </entry>
       <entry key="test_If_Word_Count_Is_The_Same()">
         <State />
       </entry>

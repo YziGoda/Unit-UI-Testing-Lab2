@@ -21,23 +21,24 @@ public class ExampleUnitTest
     @Test
     public void Test_Count_Symbols()
     {
-        assertEquals(0, TextCounter.countWords(""));
-        assertEquals(1, TextCounter.countSymbols(","));
-        assertEquals(5, TextCounter.countSymbols("Hello"));
-        assertEquals(9, TextCounter.countSymbols("!@%@4ss32"));
-        assertEquals(12, TextCounter.countSymbols("aAa 999 !@# 2^8"));
-
+        TextCounter tc = new TextCounter();
+        assertEquals(0, tc.countSymbols(""));
+        assertEquals(1, tc.countSymbols(","));
+        assertEquals(5, tc.countSymbols("Hello"));
+        assertEquals(9, tc.countSymbols("!@%@4ss32"));
+        assertEquals(12, tc.countSymbols("aAa 999 !@# 2^8"));
     }
 
     @Test
     public void Test_Count_Words()
     {
-        assertEquals(0, TextCounter.countWords(""));
-        assertEquals(0, TextCounter.countWords(","));
-        assertEquals(2, TextCounter.countWords("Hello World!"));
-        assertEquals(1, TextCounter.countWords("@!#%!^#!#!%@"));
-        assertEquals(5, TextCounter.countWords("AaA 333 !@#$ 9asd2 s5^126as"));
-        assertEquals(3, TextCounter.countWords("TETTE1\nTETE2 TESTTEW"));
+        TextCounter tc = new TextCounter();
+        assertEquals(0, tc.countWords(""));
+        assertEquals(0, tc.countWords(","));
+        assertEquals(2, tc.countWords("Hello World!"));
+        assertEquals(1, tc.countWords("@!#%!^#!#!%@"));
+        assertEquals(5, tc.countWords("AaA 333 !@#$ 9asd2 s5^126as"));
+        assertEquals(3, tc.countWords("TETTE1\nTETE2 TESTTEW"));
     }
 }
 
